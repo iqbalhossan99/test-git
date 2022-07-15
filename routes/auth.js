@@ -28,11 +28,13 @@ router.post("/register", async (req, res) => {
   }
 });
 
-// LOGIN
+// USER LOGIN
 router.post("/login", async (req, res) => {
   try {
     const getEmail = req.body?.email;
     const getPassword = req.body?.password;
+
+    console.log(req.body);
 
     const getUser = await User.findOne({ email: getEmail });
     !getUser && res.status(400).json("Email  address doesn't match!");
