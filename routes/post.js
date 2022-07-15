@@ -18,7 +18,7 @@ router.post("", async (req, res) => {
 });
 
 // GET ALL POST
-router.get("", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const query = {};
     const posts = await Post.find(query);
