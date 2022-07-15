@@ -58,7 +58,7 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-// UPDATE THE POST
+// UPDATE THE SINGLE POST
 router.put("/:id", async (req, res) => {
   try {
     const id = req.params.id;
