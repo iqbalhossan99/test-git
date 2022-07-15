@@ -2,7 +2,7 @@ const router = require("express").Router();
 const jwt = require("jsonwebtoken");
 
 // create jwt token
-module.exports = (req, res, next) => {
+const verifyToken = (req, res, next) => {
   const authHeader = req.headers.authorization;
   if (!authHeader) {
     return res.status(401).send({ message: "UnAuthorized access" });
@@ -18,4 +18,4 @@ module.exports = (req, res, next) => {
   });
 };
 
-// module.exports = router;
+module.exports = verifyToken;
